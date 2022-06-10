@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 /* get the specified fonts */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@200;300;400&family=Bellefair&display=swap");
 
 @layer base {
   html {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Barlow", sans-serif;
   }
 
   body {
@@ -41,6 +41,7 @@
 
   h5 {
     font-size: 28px;
+    font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 4.75px;
   }
 
