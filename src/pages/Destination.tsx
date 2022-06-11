@@ -1,7 +1,9 @@
 import React from "react";
 
 const Destination = () => {
-  return <section className="Destination h-screen w-full">Destination</section>;
+  return (
+    <section className="Destination min-h-screen w-full">Destination</section>
+  );
 };
 
 export default Destination;
