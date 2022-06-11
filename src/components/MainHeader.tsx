@@ -1,7 +1,10 @@
+import logo from "../assets/shared/logo.svg";
+import MobileNav from "./MobileNav";
+
 export const MainHeader = () => {
   return (
-    <div className="w-full bg-transparent fixed top-0 p-4">
-      <p>Space Tourism</p>
-    </div>
+    <header className="w-full bg-transparent fixed top-0 p-4">
+      <MobileNav logo={logo} />
+    </header>
   );
 };
