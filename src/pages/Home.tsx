@@ -13,7 +13,8 @@ const Home = () => {
         back, and relax because we’ll give you a truly out of this world
         experience!
       </p>
-      <button className="bg-primary text-dark font-bellefair text-xl rounded-full h-[150px] w-[150px] mx-auto flex justify-center py-[4rem] mt-20">
+
+      <button className="noSelect transition ease-linear delay-150 bg-primary hover:transition-all focus:outline hover:outline outline-primary/10 outline-[50px] text-dark font-bellefair text-xl rounded-full h-[150px] w-[150px] mx-auto flex justify-center py-[4rem] mt-20">
         EXPLORE
       </button>
     </section>
