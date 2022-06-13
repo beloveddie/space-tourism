@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import MenuBar from "./MenuBar";
+import MobileNavList from "./MobileNavList";
 
 export type MobileNavProps = {
   children?: ReactNode;
@@ -24,7 +24,7 @@ const MobileNav = ({ children, logo }: MobileNavProps) => {
           }}
         />
       </nav>
-      {showMenuBar && <MenuBar />}
+      {showMenuBar && <MobileNavList />}
     </>
   );
 };
