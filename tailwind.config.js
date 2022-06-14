@@ -8,6 +8,7 @@ module.exports = {
         dark: "#0B0D17",
         primary: "#ffffff",
         secondary: "#D0D6F9",
+        selection: "#383B4B",
       },
       fontFamily: {
         bellefair: ["Bellefair", "serif"],
