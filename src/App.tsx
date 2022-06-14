@@ -5,20 +5,39 @@ import Crew from "./pages/Crew";
 import Destination from "./pages/Destination";
 import Technology from "./pages/Technology";
 import DestinationDetail from "./pages/DestinationDetail";
+import { useEffect, useState } from "react";
+import DataContext from "./context/data";
 
 function App() {
+  const [data, setData] = useState(null);
+  // fetch data
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => alert(error));
+  }, []);
+
+  if (!data) {
+    return <p>Loading....</p>;
+  }
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="destination">
-          <Route index element={<Destination />} />
-          <Route path=":destination" element={<DestinationDetail />} />
+    <DataContext.Provider value={data}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="destination">
+            <Route index element={<Destination />} />
+            <Route path=":destination" element={<DestinationDetail />} />
+          </Route>
+          <Route path="technology" element={<Technology />} />
+          <Route path="crew" element={<Crew />} />
         </Route>
-        <Route path="technology" element={<Technology />} />
-        <Route path="crew" element={<Crew />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </DataContext.Provider>
   );
 }
 
