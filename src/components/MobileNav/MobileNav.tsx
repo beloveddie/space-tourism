@@ -2,21 +2,16 @@ import React, { ReactNode, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { TItem } from "./MobileNavListItem";
 import MobileNavList from "./MobileNavList";
 
 export type MobileNavProps = {
   children?: ReactNode;
   logo: string;
+  routes: TItem[];
 };
 
-const routes = [
-  { title: "home", url: "/" },
-  { title: "destination", url: "/destination" },
-  { title: "crew", url: "/crew" },
-  { title: "technology", url: "/technology" },
-];
-
-const MobileNav = ({ children, logo }: MobileNavProps) => {
+const MobileNav = ({ children, logo, routes }: MobileNavProps) => {
   const [showMenuBar, setShowMenuBar] = useState(false);
   return (
     <>

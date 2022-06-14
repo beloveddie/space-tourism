@@ -3,7 +3,7 @@ import MobileNavListItem, { TItem } from "./MobileNavListItem";
 
 export type TItems = TItem[];
 
-export type TItemsProps = {
+type TItemsProps = {
   items: TItems;
 };
 
