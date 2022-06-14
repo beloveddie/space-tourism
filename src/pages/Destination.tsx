@@ -3,6 +3,7 @@ import SideNumbers from "../components/ui/SideNumbers";
 import Title from "../components/ui/Title";
 import moon from "../assets/destination/image-moon.png";
 import { Link } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const destinationLinks = ["moon", "mars", "europa", "titan"];
 
@@ -20,10 +21,10 @@ const Destination = () => {
       {/* destination links */}
       <ul className="flex mt-6 gap-7 justify-center">
         {destinationLinks.map((destinationLink) => (
-          <li>
+          <li key={nanoid()}>
             <h5 className="nav-text text-secondary">
               <Link
-                to="#"
+                to={`/destination/${destinationLink}`}
                 className="pb-1 hover:border-b-4 hover:border-primary/20 active:border-primary focus:text-primary focus:border-b-4 focus:border-primary"
               >
                 {destinationLink.toUpperCase()}
