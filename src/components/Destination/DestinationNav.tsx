@@ -10,7 +10,7 @@ type TDestinationNavProps = {
 
 const DestinationNav = ({ destinationLinks }: TDestinationNavProps) => {
   return (
-    <ul className="flex mt-6 gap-7 justify-center">
+    <ul className="flex mt-56 gap-7 justify-center mx-auto w-full">
       {destinationLinks.map((destinationLink) => (
         <li key={nanoid()}>
           <h5 className="nav-text text-secondary">

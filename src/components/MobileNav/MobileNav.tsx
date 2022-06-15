@@ -15,7 +15,7 @@ const MobileNav = ({ children, logo, routes }: MobileNavProps) => {
   const [showMenuBar, setShowMenuBar] = useState(false);
   return (
     <>
-      <nav className="flex w-100 justify-between items-center ">
+      <nav className="flex w-100 justify-between items-center">
         <Link to="/">
           <img src={logo} alt="space tourism logo" />
         </Link>
