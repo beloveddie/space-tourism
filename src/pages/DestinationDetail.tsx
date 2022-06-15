@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import DestinationArticle from "../components/Destination/DestinationArticle";
+import DestinationImage, {
+  TDestinationImages,
+} from "../components/Destination/DestinationImage";
 import DataContext from "../context/data";
 
 type TDataContext = {
@@ -8,11 +12,11 @@ type TDataContext = {
   technology: [];
 };
 
-type TDestination = {
+export type TDestination = {
   name: string;
   description: string;
   distance: string;
-  images: {};
+  images: TDestinationImages;
   travel: string;
 };
 
@@ -27,8 +31,18 @@ const DestinationDetail = () => {
       destination.name.toLowerCase() === params.destination.toLowerCase()
   );
 
-  console.log(destinationFromUrl);
-  return <div>DestinationDetail</div>;
+  console.log(typeof destinationFromUrl);
+  return (
+    <>
+      <DestinationImage images={destinationFromUrl!.images} />
+      <DestinationArticle
+        title={destinationFromUrl!.name}
+        description={destinationFromUrl!.description}
+        travel={destinationFromUrl!.travel}
+        distance={destinationFromUrl!.distance}
+      />
+    </>
+  );
 };
 
 export default DestinationDetail;
