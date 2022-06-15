@@ -1,16 +1,7 @@
-import React from "react";
-import DestinationImage from "../components/Destination/DestinationImage";
-import DestinationArticle from "../components/Destination/DestinationArticle";
+import { Navigate } from "react-router-dom";
 
 const Destination = () => {
-  return (
-    <>
-      {/* image document */}
-      <DestinationImage />
-      {/* destination article */}
-      <DestinationArticle />
-    </>
-  );
+  return <Navigate to="/destination/moon" replace={true} />;
 };
 
 export default Destination;
