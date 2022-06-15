@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import { Routes, Route } from "react-router-dom";
 import Crew from "./pages/Crew";
 import Destination from "./pages/Destination";
+import DestinationLayout from "./components/Destination/DestinationLayout";
 import Technology from "./pages/Technology";
 import DestinationDetail from "./pages/DestinationDetail";
 import { useEffect, useState } from "react";
@@ -10,7 +11,7 @@ import DataContext from "./context/data";
 
 function App() {
   const [data, setData] = useState(null);
-  // fetch data
+  // fetch data and Provide dat via context
   useEffect(() => {
     fetch("/data.json")
       .then((response) => response.json())
@@ -29,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="destination">
+          <Route path="destination" element={<DestinationLayout />}>
             <Route index element={<Destination />} />
             <Route path=":destination" element={<DestinationDetail />} />
           </Route>
