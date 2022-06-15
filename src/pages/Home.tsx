@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <section className="Home min-h-screen w-full pt-20 text-center">
+    <section className="Home min-h-screen w-full pt-40 text-center">
       <h5 className="text-base text-secondary tracking-[2.7px]">
         SO, YOU WANT TO TRAVEL TO
       </h5>
