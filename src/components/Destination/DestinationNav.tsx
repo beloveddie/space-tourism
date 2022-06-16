@@ -1,11 +1,10 @@
 import { nanoid } from "nanoid";
 import React from "react";
 import { Link } from "react-router-dom";
-
-type TDestinationLinks = string[];
+import { TPageLinks } from "../../shared/types";
 
 type TDestinationNavProps = {
-  destinationLinks: TDestinationLinks;
+  destinationLinks: TPageLinks;
 };
 
 const DestinationNav = ({ destinationLinks }: TDestinationNavProps) => {
