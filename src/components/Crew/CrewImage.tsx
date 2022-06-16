@@ -1,15 +1,18 @@
 import React from "react";
+import { TImages } from "../../shared/types";
 import PageImageCnt from "../ui/PageImageCnt";
 
-const CrewImage = () => {
+type TCrewImageProps = {
+  images: TImages;
+  text: string;
+};
+
+const CrewImage = ({ images, text }: TCrewImageProps) => {
   return (
     <PageImageCnt>
       <picture className="w-[226.15px]">
-        <source />
-        <img
-          src="https://res.cloudinary.com/enthusiasm/image/upload/v1655375345/space-tourism/crew/image-anousheh-ansari_kupxst.webp"
-          alt=""
-        />
+        <source srcSet={images.webp} />
+        <img src={images.png} alt={text} />
       </picture>
     </PageImageCnt>
   );
