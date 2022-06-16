@@ -5,7 +5,7 @@ import Crew from "./pages/Crew";
 import Destination from "./pages/Destination";
 import DestinationLayout from "./components/Destination/DestinationLayout";
 import Technology from "./pages/Technology";
-import DestinationDetail from "./pages/DestinationDetail";
+import DestinationDetail from "./components/Destination/DestinationDetail";
 import { useEffect, useState } from "react";
 import DataContext from "./context/data";
 
