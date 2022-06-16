@@ -1,7 +1,8 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 
 const Crew = () => {
-  return <section className="Crew min-h-screen w-full">Crew</section>;
+  return <Navigate to="/crew/douglas-hurley" replace={true} />;
 };
 
 export default Crew;
