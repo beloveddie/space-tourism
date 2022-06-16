@@ -30,7 +30,6 @@ const CrewDetail = () => {
       params.crew.replace("-", " ").toLowerCase()
   );
 
-  console.log(crewFromUrl);
   return (
     <>
       <div className="w-[90%] h-auto mx-auto border-b-[0.14rem] border-selection">
