@@ -4,7 +4,7 @@ import DestinationArticle from "./DestinationArticle";
 import DestinationImage, { TDestinationImages } from "./DestinationImage";
 import DataContext from "../../context/data";
 
-type TDataContext = {
+export type TDataContext = {
   destinations: TDestination[];
   crew: [];
   technology: [];
