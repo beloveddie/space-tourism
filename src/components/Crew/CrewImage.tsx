@@ -10,7 +10,7 @@ type TCrewImageProps = {
 const CrewImage = ({ images, text }: TCrewImageProps) => {
   return (
     <PageImageCnt>
-      <picture className="w-[226.15px]">
+      <picture className="w-[226.25px]">
         <source srcSet={images.webp} />
         <img src={images.png} alt={text} />
       </picture>
