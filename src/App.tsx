@@ -8,6 +8,8 @@ import Technology from "./pages/Technology";
 import DestinationDetail from "./components/Destination/DestinationDetail";
 import { useEffect, useState } from "react";
 import DataContext from "./context/data";
+import CrewLayout from "./components/Crew/CrewLayout";
+import CrewDetail from "./components/Crew/CrewDetail";
 
 function App() {
   const [data, setData] = useState(null);
@@ -34,8 +36,11 @@ function App() {
             <Route index element={<Destination />} />
             <Route path=":destination" element={<DestinationDetail />} />
           </Route>
+          <Route path="crew" element={<CrewLayout />}>
+            <Route index element={<Crew />} />
+            <Route path=":crew" element={<CrewDetail />} />
+          </Route>
           <Route path="technology" element={<Technology />} />
-          <Route path="crew" element={<Crew />} />
         </Route>
       </Routes>
     </DataContext.Provider>
