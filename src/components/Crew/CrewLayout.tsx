@@ -9,12 +9,13 @@ const CrewLayout = () => {
   return (
     <section className="Crew min-h-screen w-full text-center">
       <PageHeading>
-        <SideNumbers index="1" dark={true} />
-        <Title title="Pick your destination" />
+        <SideNumbers index="2" dark={true} />
+        <Title title="meet your crew" />
       </PageHeading>
-      <PageSection>
-        <Outlet />
-      </PageSection>
+
+      {/* <PageSection> */}
+      <Outlet />
+      {/* </PageSection> */}
     </section>
   );
 };
