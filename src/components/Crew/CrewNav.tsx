@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 import { BsCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -10,12 +11,14 @@ const CrewNav = ({ crewNavLinks }: TCrewNavProps) => {
   return (
     <ul className="flex mt-8 gap-7 justify-center mx-auto w-full">
       {crewNavLinks.map((crewNavLink) => (
-        <Link
-          to={`/crew/${crewNavLink}`}
-          className="text-primary/20 hover:text-primary/50 focus:text-primary text-[12px]"
-        >
-          <BsCircleFill />
-        </Link>
+        <li key={nanoid()}>
+          <Link
+            to={`/crew/${crewNavLink}`}
+            className="text-primary/20 hover:text-primary/50 focus:text-primary text-[12px]"
+          >
+            <BsCircleFill />
+          </Link>
+        </li>
       ))}
     </ul>
   );
