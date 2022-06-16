@@ -1,20 +1,15 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import DestinationArticle from "./DestinationArticle";
-import DestinationImage, { TDestinationImages } from "./DestinationImage";
+import DestinationImage from "./DestinationImage";
 import DataContext from "../../context/data";
-
-export type TDataContext = {
-  destinations: TDestination[];
-  crew: [];
-  technology: [];
-};
+import { TDataContext, TImages } from "../../shared/types";
 
 export type TDestination = {
   name: string;
   description: string;
   distance: string;
-  images: TDestinationImages;
+  images: TImages;
   travel: string;
 };
 

@@ -1,10 +1,9 @@
 import React from "react";
+import { TImages } from "../../shared/types";
 import PageImageCnt from "../ui/PageImageCnt";
 
-export type TDestinationImages = { png: string; webp: string };
-
 export type TDestinationImageProps = {
-  images: TDestinationImages;
+  images: TImages;
   text: string;
 };
 
