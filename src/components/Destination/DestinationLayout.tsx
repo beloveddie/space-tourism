@@ -1,5 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import PageHeading from "../ui/PageHeading";
+import PageSection from "../ui/PageSection";
 import SideNumbers from "../ui/SideNumbers";
 import Title from "../ui/Title";
 import DestinationNav from "./DestinationNav";
@@ -9,14 +11,14 @@ const destinationLinks = ["moon", "mars", "europa", "titan"];
 const DestinationLayout = () => {
   return (
     <section className="Destination min-h-screen w-full text-center ">
-      <div className="pt-28 flex justify-center gap-3">
+      <PageHeading>
         <SideNumbers index="1" dark={true} />
         <Title title="Pick your destination" />
-      </div>
+      </PageHeading>
       <DestinationNav destinationLinks={destinationLinks} />
-      <section className="-mt-64">
+      <PageSection>
         <Outlet />
-      </section>
+      </PageSection>
     </section>
   );
 };
