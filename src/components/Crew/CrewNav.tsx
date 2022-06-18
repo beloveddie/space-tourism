@@ -9,12 +9,12 @@ type TCrewNavProps = {
 };
 const CrewNav = ({ crewNavLinks }: TCrewNavProps) => {
   return (
-    <ul className="flex mt-8 gap-7 justify-center mx-auto w-full">
+    <ul className="flex gap-7 justify-center mx-auto w-full">
       {crewNavLinks.map((crewNavLink) => (
         <li key={nanoid()}>
           <Link
             to={`/crew/${crewNavLink}`}
-            className="text-primary/20 hover:text-primary/50 focus:text-primary text-[12px]"
+            className="text-primary/20 hover:text-primary/50 active:text-primary focus:text-primary text-[12px]"
           >
             <BsCircleFill />
           </Link>

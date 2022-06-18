@@ -4,7 +4,6 @@ import DataContext from "../../context/data";
 import { TDataContext, TImages } from "../../shared/types";
 import CrewArticle from "./CrewArticle";
 import CrewImage from "./CrewImage";
-import CrewNav from "./CrewNav";
 
 export type TCrew = {
   name: string;
@@ -12,13 +11,6 @@ export type TCrew = {
   role: string;
   images: TImages;
 };
-
-const crewNavLinks = [
-  "anousheh-ansari",
-  "victor-glover",
-  "mark-shuttleworth",
-  "douglas-hurley",
-];
 
 const CrewDetail = () => {
   const { crew } = useContext(DataContext) as TDataContext;
@@ -32,15 +24,16 @@ const CrewDetail = () => {
 
   return (
     <>
-      <div className="w-[90%] h-auto mx-auto border-b-[0.14rem] border-selection">
-        <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
-      </div>
-      <CrewNav crewNavLinks={crewNavLinks} />
-      <CrewArticle
-        name={crewFromUrl!.name}
-        role={crewFromUrl!.role}
-        bio={crewFromUrl!.bio}
-      />
+      <section className="-mt-80">
+        <div className="w-[90%] h-62 mx-auto mb-8 border-b-[0.14rem] border-selection">
+          <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
+        </div>
+        <CrewArticle
+          name={crewFromUrl!.name}
+          role={crewFromUrl!.role}
+          bio={crewFromUrl!.bio}
+        />
+      </section>
     </>
   );
 };
