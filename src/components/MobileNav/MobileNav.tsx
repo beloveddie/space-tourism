@@ -14,31 +14,29 @@ export type MobileNavProps = {
 const MobileNav = ({ children, logo, routes }: MobileNavProps) => {
   const [showMenuBar, setShowMenuBar] = useState(false);
   return (
-    <>
-      <nav className="flex w-100 justify-between items-center">
-        <Link to="/">
-          <img src={logo} alt="space tourism logo" />
-        </Link>
-        {!showMenuBar ? (
-          <AiOutlineMenu
-            className="text-4xl text-secondary font-bold cursor-pointer"
-            role="button"
-            onClick={() => {
-              setShowMenuBar(!showMenuBar);
-            }}
-          />
-        ) : (
-          <IoMdClose
-            className="text-4xl text-secondary font-bold cursor-pointer"
-            role="button"
-            onClick={() => {
-              setShowMenuBar(!showMenuBar);
-            }}
-          />
-        )}
-      </nav>
+    <nav className="flex w-100 justify-between items-center">
+      <Link to="/">
+        <img src={logo} alt="space tourism logo" />
+      </Link>
+      {!showMenuBar ? (
+        <AiOutlineMenu
+          className="text-4xl text-secondary font-bold cursor-pointer z-20"
+          role="button"
+          onClick={() => {
+            setShowMenuBar(!showMenuBar);
+          }}
+        />
+      ) : (
+        <IoMdClose
+          className="text-4xl text-secondary font-bold cursor-pointer z-20"
+          role="button"
+          onClick={() => {
+            setShowMenuBar(!showMenuBar);
+          }}
+        />
+      )}
       {showMenuBar && <MobileNavList items={routes} />}
-    </>
+    </nav>
   );
 };
 
