@@ -1,6 +1,4 @@
-import React from "react";
 import { TImages } from "../../shared/types";
-import PageImageCnt from "../ui/PageImageCnt";
 
 type TCrewImageProps = {
   images: TImages;
@@ -9,12 +7,10 @@ type TCrewImageProps = {
 
 const CrewImage = ({ images, text }: TCrewImageProps) => {
   return (
-    <PageImageCnt>
-      <picture>
-        <source srcSet={images.webp} />
-        <img src={images.png} alt={text} className="w-56 h-60" />
-      </picture>
-    </PageImageCnt>
+    <picture>
+      <source srcSet={images.webp} />
+      <img src={images.png} alt={text} className="w-56 h-60 mx-auto" />
+    </picture>
   );
 };
 

@@ -26,7 +26,7 @@ const CrewDetail = () => {
 
   return (
     <>
-      <div className="w-[90%] h-62 mx-auto mb-8 border-b-[0.14rem] border-selection">
+      <div className="w-[90%] h-62 mx-auto  mb-8 border-b-[0.14rem] border-selection">
         <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
       </div>
       <CrewNav crewNavLinks={crewNavLinks} activeLink={params.crew} />
