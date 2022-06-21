@@ -4,6 +4,8 @@ import DestinationArticle from "./DestinationArticle";
 import DestinationImage from "./DestinationImage";
 import DataContext from "../../context/data";
 import { TDataContext, TImages } from "../../shared/types";
+import { destinationLinks } from "./DestinationLayout";
+import DestinationNav from "./DestinationNav";
 
 export type TDestination = {
   name: string;
@@ -27,6 +29,10 @@ const DestinationDetail = () => {
       <DestinationImage
         images={destinationFromUrl!.images}
         text={destinationFromUrl!.name}
+      />
+      <DestinationNav
+        destinationLinks={destinationLinks}
+        activeLink={params.destination}
       />
       <DestinationArticle
         title={destinationFromUrl!.name}

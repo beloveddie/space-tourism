@@ -4,9 +4,8 @@ import PageHeading from "../ui/PageHeading";
 import PageSection from "../ui/PageSection";
 import SideNumbers from "../ui/SideNumbers";
 import Title from "../ui/Title";
-import DestinationNav from "./DestinationNav";
 
-const destinationLinks = ["moon", "mars", "europa", "titan"];
+export const destinationLinks = ["moon", "mars", "europa", "titan"];
 
 const DestinationLayout = () => {
   return (
@@ -15,7 +14,6 @@ const DestinationLayout = () => {
         <SideNumbers index="1" dark={true} />
         <Title title="Pick your destination" />
       </PageHeading>
-      <DestinationNav destinationLinks={destinationLinks} />
       <PageSection>
         <Outlet />
       </PageSection>
