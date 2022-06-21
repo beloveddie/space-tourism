@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { Link } from "react-router-dom";
 import { TPageLinks } from "../../shared/types";
+import { isActive } from "../../utils/isActive";
 
 type TDestinationNavProps = {
   destinationLinks: TPageLinks;
@@ -20,7 +21,7 @@ const DestinationNav = ({
               id={index.toString()}
               to={`/destination/${destinationLink}`}
               className={`pb-1 hover:border-b-4 hover:border-primary/20 ${
-                activeLink === destinationLink
+                isActive(activeLink, destinationLink)
                   ? " border-primary text-primary border-b-4"
                   : ""
               }`}
