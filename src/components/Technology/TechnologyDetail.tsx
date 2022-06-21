@@ -23,6 +23,10 @@ const TechnologyDetail = () => {
     params.technology
   ) as TTechnology;
 
+  if (!technologyFromUrl) {
+    return <p>No Data yet...</p>;
+  }
+
   return (
     <>
       <TechnologyImage

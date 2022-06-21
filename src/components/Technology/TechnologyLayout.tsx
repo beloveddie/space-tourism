@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import PageHeading from "../ui/PageHeading";
+import PageSection from "../ui/PageSection";
 import SideNumbers from "../ui/SideNumbers";
 import Title from "../ui/Title";
 import TechnologyNav from "./TechnologyNav";
@@ -15,7 +16,9 @@ const TechnologyLayout = () => {
         <Title title="Space Launch 101" />
       </PageHeading>
       <TechnologyNav technologyLinks={technologyLinks} />
-      <Outlet />
+      <PageSection>
+        <Outlet />
+      </PageSection>
     </section>
   );
 };
