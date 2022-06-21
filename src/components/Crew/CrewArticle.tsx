@@ -10,7 +10,7 @@ const CrewArticle = ({ name, role, bio }: TCrewArticleProps) => {
   return (
     <article className="pt-9">
       <h5 className="text-base text-primary/50">{role.toUpperCase()}</h5>
-      <p className="sub-heading-1">{name.toUpperCase()}</p>
+      <h4>{name.toUpperCase()}</h4>
       <p className="text-secondary pt-4 text-base w-[90%] mx-auto pb-4 leading-6">
         {bio}
       </p>
