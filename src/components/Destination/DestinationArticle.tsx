@@ -17,7 +17,7 @@ const DestinationArticle = ({
     <article className="pt-14">
       <h2 className="text-[56px]">{title.toUpperCase()}</h2>
 
-      <p className="text-secondary text-base w-11/12 mx-auto pb-10 border-b-2 border-selection">
+      <p className="text-secondary text-base w-11/12 mx-auto pb-10 border-b-2 border-selection leading-8">
         {description}
       </p>
 
