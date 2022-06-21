@@ -1,9 +1,8 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 
 const Technology = () => {
-  return (
-    <section className="Technology min-h-screen w-full">Technology</section>
-  );
+  return <Navigate to="/technology/launch-vehicle" replace={true} />;
 };
 
 export default Technology;
