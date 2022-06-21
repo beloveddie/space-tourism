@@ -4,7 +4,6 @@ import PageHeading from "../ui/PageHeading";
 import PageSection from "../ui/PageSection";
 import SideNumbers from "../ui/SideNumbers";
 import Title from "../ui/Title";
-import CrewNav from "./CrewNav";
 
 export const crewNavLinks = [
   "anousheh-ansari",
