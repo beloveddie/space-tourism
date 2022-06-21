@@ -3,20 +3,26 @@ import React from "react";
 import { BsCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { TPageLinks } from "../../shared/types";
+import { isActive } from "../../utils/isActive";
 import { slugify } from "../../utils/slugify";
 
 type TCrewNavProps = {
   crewNavLinks: TPageLinks;
+  activeLink: string;
 };
 
-const CrewNav = ({ crewNavLinks }: TCrewNavProps) => {
+const CrewNav = ({ crewNavLinks, activeLink }: TCrewNavProps) => {
   return (
     <ul className="flex gap-7 justify-center mx-auto w-full">
       {crewNavLinks.map((crewNavLink) => (
         <li key={nanoid()}>
           <Link
             to={`/crew/${slugify(crewNavLink)}`}
-            className="text-primary/20 hover:text-primary/50 active:text-primary focus:text-primary text-[12px]"
+            className={`text-primary/20 hover:text-primary/50 ${
+              isActive(activeLink, crewNavLink)
+                ? "  text-primary text-[12px]"
+                : ""
+            }`}
           >
             <BsCircleFill />
           </Link>

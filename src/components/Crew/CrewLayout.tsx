@@ -6,7 +6,7 @@ import SideNumbers from "../ui/SideNumbers";
 import Title from "../ui/Title";
 import CrewNav from "./CrewNav";
 
-const crewNavLinks = [
+export const crewNavLinks = [
   "anousheh-ansari",
   "victor-glover",
   "mark-shuttleworth",
@@ -20,12 +20,9 @@ const CrewLayout = () => {
         <SideNumbers index="2" dark={true} />
         <Title title="meet your crew" />
       </PageHeading>
-      <div className="mt-72">
-        <CrewNav crewNavLinks={crewNavLinks} />
-        {/* <PageSection> */}
+      <PageSection>
         <Outlet />
-        {/* </PageSection> */}
-      </div>
+      </PageSection>
     </section>
   );
 };
