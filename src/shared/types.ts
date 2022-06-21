@@ -10,3 +10,7 @@ export type TDataContext = {
 };
 
 export type TPageLinks = string[];
+
+export type TSetShowMobileMenuBar = React.Dispatch<
+  React.SetStateAction<boolean>
+>;

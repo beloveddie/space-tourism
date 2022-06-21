@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -6,13 +6,12 @@ import { TItem } from "./MobileNavListItem";
 import MobileNavList from "./MobileNavList";
 
 export type MobileNavProps = {
-  children?: ReactNode;
   logo: string;
   routes: TItem[];
 };
 
-const MobileNav = ({ children, logo, routes }: MobileNavProps) => {
-  const [showMenuBar, setShowMenuBar] = useState(false);
+const MobileNav = ({ logo, routes }: MobileNavProps) => {
+  const [showMenuBar, setShowMenuBar] = useState<boolean>(false);
   return (
     <nav className="flex w-100 justify-between items-center">
       <Link to="/">
@@ -35,7 +34,9 @@ const MobileNav = ({ children, logo, routes }: MobileNavProps) => {
           }}
         />
       )}
-      {showMenuBar && <MobileNavList items={routes} />}
+      {showMenuBar && (
+        <MobileNavList items={routes} setShowMenuBar={setShowMenuBar} />
+      )}
     </nav>
   );
 };

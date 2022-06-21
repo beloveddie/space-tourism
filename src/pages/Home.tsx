@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       </p>
 
       <button className="noSelect transition ease-linear delay-150 bg-primary hover:transition-all focus:outline hover:outline outline-primary/10 outline-[50px] text-dark font-bellefair text-xl rounded-full w-[160px] h-[160px] mx-auto mt-12  flex justify-center items-center">
-        EXPLORE
+        <Link to={"/destination"}>EXPLORE</Link>
       </button>
     </section>
   );
