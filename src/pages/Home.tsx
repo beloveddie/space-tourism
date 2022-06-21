@@ -14,7 +14,7 @@ const Home = () => {
         experience!
       </p>
 
-      <button className="noSelect transition ease-linear delay-150 bg-primary hover:transition-all focus:outline hover:outline outline-primary/10 outline-[50px] text-dark font-bellefair text-xl rounded-full h-[200px] w-[200px] mx-auto flex justify-center p-[5.4rem] mt-20">
+      <button className="noSelect transition ease-linear delay-150 bg-primary hover:transition-all focus:outline hover:outline outline-primary/10 outline-[50px] text-dark font-bellefair text-xl rounded-full h-[200px] w-[200px]  mx-auto  mt-20 flex justify-center items-center">
         EXPLORE
       </button>
     </section>
