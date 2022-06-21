@@ -15,6 +15,9 @@ module.exports = {
         barlow: ["Barlow", "sans-serif"],
         "barlow-condensed": ["Barlow Condensed", "sans-serif"],
       },
+      animation: {
+        "spin-slow": "spin 80s linear infinite",
+      },
     },
   },
   plugins: [],
