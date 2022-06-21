@@ -5,6 +5,8 @@ import { TDataContext } from "../../shared/types";
 import { findData } from "./../../utils/findData";
 import TechnologyArticle from "./TechnologyArticle";
 import TechnologyImage from "./TechnologyImage";
+import { technologyLinks } from "./TechnologyLayout";
+import TechnologyNav from "./TechnologyNav";
 
 export type TTechnologyImage = { portrait: string; landscape: string };
 
@@ -32,6 +34,10 @@ const TechnologyDetail = () => {
       <TechnologyImage
         text={technologyFromUrl!.name}
         images={technologyFromUrl.images}
+      />
+      <TechnologyNav
+        technologyLinks={technologyLinks}
+        activeLink={params.technology}
       />
       <TechnologyArticle
         name={technologyFromUrl!.name}
