@@ -5,8 +5,9 @@ import { reslugify } from "./reslugify";
 
 type TExpectedData = TDestination[] & TCrew[] & TTechnology[];
 
-export const findData = (data: TExpectedData, searchString: string) => {
+export const findData = (data: [], searchString: string): unknown => {
   return data.find(
-    (item) => item.name.toLowerCase() === reslugify(searchString.toLowerCase())
+    (item: { name: string }) =>
+      item.name.toLowerCase() === reslugify(searchString.toLowerCase())
   );
 };
