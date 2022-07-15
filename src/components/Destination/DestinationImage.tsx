@@ -12,7 +12,7 @@ const DestinationImage = ({ images, text }: TDestinationImageProps) => {
     <PageImageCnt>
       <picture className="w-44 h-44">
         <source srcSet={images.webp} />
-        <img src={images.png} alt={text} className="animate-spin-slow" />
+        <img src={images.png} alt={text} />
       </picture>
     </PageImageCnt>
   );

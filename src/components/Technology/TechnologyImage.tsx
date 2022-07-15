@@ -9,7 +9,7 @@ export type TTechnologyProps = {
 const TechnologyImage = ({ images, text }: TTechnologyProps) => {
   return (
     <picture>
-      <img src={images.landscape} alt={text} className="mt-6 w-full" />
+      <img src={images.landscape} alt={text} className="mt-6 w-full h-100" />
     </picture>
   );
 };
