@@ -1,9 +1,7 @@
 import React from "react";
-import MobileNavListItem, { TItem } from "./MobileNavListItem";
+import MobileNavListItem from "./MobileNavListItem";
 import { nanoid } from "nanoid";
-import { TSetShowMobileMenuBar } from "../../shared/types";
-
-export type TItems = TItem[];
+import { TItems, TSetShowMobileMenuBar } from "../../shared/types";
 
 type TItemsProps = {
   items: TItems;

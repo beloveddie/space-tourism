@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-import { TItem } from "./MobileNavListItem";
 import MobileNavList from "./MobileNavList";
+import { NavProps } from "../../shared/types";
 
-export type MobileNavProps = {
-  routes: TItem[];
-};
-
-const MobileNav = ({ routes }: MobileNavProps) => {
+const MobileNav = ({ routes }: NavProps) => {
   const [showMenuBar, setShowMenuBar] = useState<boolean>(false);
   return (
     <nav className="md:hidden flex">
