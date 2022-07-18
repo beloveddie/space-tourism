@@ -15,12 +15,12 @@ const TechnologyNav = ({
   activeLink,
 }: TTechnologyNavProps) => {
   return (
-    <ul className="mt-6 flex gap-3 justify-center w-full">
+    <ul className="mt-6 flex gap-3 justify-center w-full md:mt-14">
       {technologyLinks.map((technologyLink, index) => (
         <li key={nanoid()}>
           <Link
             to={`/technology/${slugify(technologyLink)}`}
-            className={`flex justify-center items-center bg-transparent border w-[60px] h-[60px] rounded-full border-primary/20 hover:border-primary/50 ${
+            className={`flex justify-center items-center bg-transparent border w-[60px] h-[60px] rounded-full border-primary/20 hover:border-primary/50 md:w-20 md:h-20 md:text-2xl ${
               isActive(activeLink, slugify(technologyLink))
                 ? "bg-primary text-dark"
                 : ""
