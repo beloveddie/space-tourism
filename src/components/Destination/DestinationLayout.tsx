@@ -9,7 +9,7 @@ export const destinationLinks = ["moon", "mars", "europa", "titan"];
 
 const DestinationLayout = () => {
   return (
-    <section className="Destination min-h-screen w-full text-center ">
+    <section className="Destination min-h-screen w-full text-center">
       <PageHeading>
         <SideNumbers index="1" dark={true} />
         <Title title="Pick your destination" />
