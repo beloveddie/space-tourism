@@ -14,14 +14,14 @@ const DestinationArticle = ({
   travel,
 }: TDestinationArticleProps) => {
   return (
-    <article className="pt-4 pb-8">
-      <h2 className="text-[56px]">{title.toUpperCase()}</h2>
+    <article className="mt-4 pb-8 md:mt-8">
+      <h2 className="text-[56px] md:text-[80px]">{title.toUpperCase()}</h2>
 
-      <p className="text-secondary text-base w-11/12 mx-auto pb-10 border-b-2 border-selection leading-7">
+      <p className="text-secondary text-base w-11/12 mx-auto pb-10 border-b-2 border-selection leading-7 md:w-[573px]">
         {description}
       </p>
 
-      <footer className=" pt-5">
+      <footer className="mt-5 flex flex-col justify-center md:mt-7 md:flex-row md:gap-16">
         <div className="pb-8">
           <p className="sub-heading-2 text-secondary leading-loose">
             AVG. DISTANCE
