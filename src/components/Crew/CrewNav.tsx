@@ -13,7 +13,7 @@ type TCrewNavProps = {
 
 const CrewNav = ({ crewNavLinks, activeLink }: TCrewNavProps) => {
   return (
-    <ul className="flex gap-7 justify-center mx-auto w-full">
+    <ul className="flex gap-7 justify-center mx-auto w-full md:mt-8">
       {crewNavLinks.map((crewNavLink) => (
         <li key={nanoid()}>
           <Link
