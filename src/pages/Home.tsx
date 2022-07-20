@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <section className="Home min-h-screen w-full pt-32 pb-4 text-center md:pt-60">
+    <section className="Home min-h-screen w-full pt-32 pb-4 text-center md:pt-60 lg:pt-32">
       <h5 className="text-base text-secondary tracking-[2.7px] md:text-xl">
         SO, YOU WANT TO TRAVEL TO
       </h5>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/shared/logo.svg";
 import { routes } from "../shared/routes";
+import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import TabletNav from "./TabletNav";
 
@@ -12,6 +13,7 @@ export const MainHeader = () => {
       </Link>
       <MobileNav routes={routes} />
       <TabletNav routes={routes} />
+      <DesktopNav routes={routes} />
     </header>
   );
 };
