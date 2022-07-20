@@ -16,7 +16,7 @@ const TabletNav = ({ routes }: NavProps) => {
   }, [params]);
 
   return (
-    <nav className="hidden md:hidden lg:flex absolute bg-primary/5 w-100 h-24 top-0 right-0 text-center items-center p-14">
+    <nav className="hidden md:hidden lg:flex absolute bg-primary/5 w-100 h-24 top-0 right-0 text-center items-center p-14 lg:pr-32 lg:pl-20">
       <DesktopNavList items={routes} activeNavLink={activeNavLink} />
     </nav>
   );

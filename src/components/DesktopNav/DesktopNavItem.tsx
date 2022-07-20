@@ -17,7 +17,7 @@ const TabletNavItem = ({ item, index, activeNavLink }: DesktopItemProps) => {
         isActive(activeNavLink, item.title) && "border-b-4"
       }`}
     >
-      <Link to={item.url}>
+      <Link to={item.url} className="flex gap-2">
         <SideNumbers index={index} />
         <H5>{item.title.toUpperCase()}</H5>
       </Link>
