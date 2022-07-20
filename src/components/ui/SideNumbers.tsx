@@ -17,7 +17,11 @@ const SideNumbers = ({ index, dark }: TSideNumbersProps) => {
     );
   }
 
-  return <H5>{0 + index}</H5>;
+  return (
+    <H5>
+      <span className="font-bold">{0 + index}</span>
+    </H5>
+  );
 };
 
 export default SideNumbers;
