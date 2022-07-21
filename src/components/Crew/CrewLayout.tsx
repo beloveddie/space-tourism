@@ -14,14 +14,16 @@ export const crewNavLinks = [
 
 const CrewLayout = () => {
   return (
-    <section className="Crew min-h-screen w-full text-center">
-      <PageHeading>
-        <SideNumbers index="2" dark={true} />
-        <Title title="meet your crew" />
-      </PageHeading>
-      <PageSection>
-        <Outlet />
-      </PageSection>
+    <section className="Crew min-h-screen w-full text-center lg:text-left">
+      <div className="lg:w-[74rem] lg:mx-auto">
+        <PageHeading>
+          <SideNumbers index="2" dark={true} />
+          <Title title="meet your crew" />
+        </PageHeading>
+        <PageSection>
+          <Outlet />
+        </PageSection>
+      </div>
     </section>
   );
 };
