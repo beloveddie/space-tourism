@@ -25,22 +25,25 @@ const DestinationDetail = () => {
   );
 
   return (
-    <>
+    <div className="lg:flex lg:gap-32">
       <DestinationImage
         images={destinationFromUrl!.images}
         text={destinationFromUrl!.name}
       />
-      <DestinationNav
-        destinationLinks={destinationLinks}
-        activeLink={params.destination}
-      />
-      <DestinationArticle
-        title={destinationFromUrl!.name}
-        description={destinationFromUrl!.description}
-        travel={destinationFromUrl!.travel}
-        distance={destinationFromUrl!.distance}
-      />
-    </>
+
+      <div>
+        <DestinationNav
+          destinationLinks={destinationLinks}
+          activeLink={params.destination}
+        />
+        <DestinationArticle
+          title={destinationFromUrl!.name}
+          description={destinationFromUrl!.description}
+          travel={destinationFromUrl!.travel}
+          distance={destinationFromUrl!.distance}
+        />
+      </div>
+    </div>
   );
 };
 

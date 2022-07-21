@@ -13,7 +13,7 @@ const DestinationNav = ({
   activeLink,
 }: TDestinationNavProps) => {
   return (
-    <ul className="flex mt-4 gap-7 justify-center mx-auto w-full lg:mt-0">
+    <ul className="flex mt-4 gap-7 justify-center mx-auto w-full lg:mt-0 lg:justify-start">
       {destinationLinks.map((destinationLink, index) => (
         <li key={nanoid()}>
           <h5 className="nav-text text-secondary">

@@ -9,14 +9,16 @@ export const destinationLinks = ["moon", "mars", "europa", "titan"];
 
 const DestinationLayout = () => {
   return (
-    <section className="Destination min-h-screen w-full text-center">
-      <PageHeading>
-        <SideNumbers index="1" dark={true} />
-        <Title title="Pick your destination" />
-      </PageHeading>
-      <PageSection>
-        <Outlet />
-      </PageSection>
+    <section className="Destination min-h-screen w-full text-center lg:text-left ">
+      <div className="lg:w-[57rem] lg:mx-auto">
+        <PageHeading>
+          <SideNumbers index="1" dark={true} />
+          <Title title="Pick your destination" />
+        </PageHeading>
+        <PageSection>
+          <Outlet />
+        </PageSection>
+      </div>
     </section>
   );
 };
