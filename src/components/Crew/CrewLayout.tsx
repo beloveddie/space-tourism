@@ -15,7 +15,7 @@ export const crewNavLinks = [
 const CrewLayout = () => {
   return (
     <section className="Crew min-h-screen w-full text-center lg:text-left">
-      <div className="lg:w-[74rem] lg:mx-auto">
+      <div className="lg:max-w-7xl lg:mx-auto lg:pl-28">
         <PageHeading>
           <SideNumbers index="2" dark={true} />
           <Title title="meet your crew" />

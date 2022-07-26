@@ -30,13 +30,13 @@ const TechnologyDetail = () => {
   }
 
   return (
-    <section className="lg:flex lg:flex-row-reverse lg:items-start lg:justify-between">
+    <section className="lg:flex lg:flex-row-reverse lg:items-start">
       <TechnologyImage
         text={technologyFromUrl!.name}
         images={technologyFromUrl.images}
       />
 
-      <div className="lg:flex lg:gap-12 lg:self-center lg:mx-20">
+      <div className="lg:flex lg:gap-12 lg:self-center">
         <TechnologyNav
           technologyLinks={technologyLinks}
           activeLink={params.technology}

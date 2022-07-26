@@ -12,7 +12,7 @@ const CrewImage = ({ images, text }: TCrewImageProps) => {
       <img
         src={images.png}
         alt={text}
-        className="w-56 h-60 mx-auto md:mt-[4.8rem] md:w-[434px] md:h-[532px] lg:w-[615px]"
+        className="w-56 h-60 mx-auto md:mt-[4.8rem] md:w-[434px] md:h-[532px]"
       />
     </picture>
   );

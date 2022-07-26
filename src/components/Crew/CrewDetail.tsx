@@ -26,11 +26,11 @@ const CrewDetail = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-col-reverse lg:flex-row-reverse lg:w-[70rem] lg:mx-auto  lg:items-start lg:mt-[-6rem]">
+      <div className="flex flex-col md:flex-col-reverse lg:flex-row-reverse lg:items-start lg:mt-[-6rem]">
         <div className="w-[90%] h-62 mx-auto mb-8 border-b-[0.14rem] border-selection md:mb-[-10rem] md:border-none lg:mb-0">
           <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
         </div>
-        <div className="lg:flex lg:flex-col-reverse lg:justify-start lg:mt-48">
+        <div className="lg:flex lg:flex-col-reverse lg:justify-start lg:mt-48 lg:mx-7">
           <CrewNav crewNavLinks={crewNavLinks} activeLink={params.crew} />
           <CrewArticle
             name={crewFromUrl!.name}

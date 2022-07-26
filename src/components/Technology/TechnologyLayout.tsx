@@ -10,7 +10,7 @@ export const technologyLinks = ["Launch vehicle", "Spaceport", "Space capsule"];
 const TechnologyLayout = () => {
   return (
     <section className="Technology min-h-screen w-full">
-      <div className=" lg:max-w-7xl lg:mx-auto">
+      <div className="lg:max-w-7xl lg:mx-auto lg:pl-28">
         <PageHeading>
           <SideNumbers index="3" dark={true} />
           <Title title="Space Launch 101" />
