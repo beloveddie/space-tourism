@@ -30,21 +30,24 @@ const TechnologyDetail = () => {
   }
 
   return (
-    <>
+    <section className="lg:flex lg:flex-row-reverse lg:items-start lg:justify-between">
       <TechnologyImage
         text={technologyFromUrl!.name}
         images={technologyFromUrl.images}
       />
-      <TechnologyNav
-        technologyLinks={technologyLinks}
-        activeLink={params.technology}
-      />
-      <TechnologyArticle
-        name={technologyFromUrl!.name}
-        tag={"The terminology"}
-        description={technologyFromUrl!.description}
-      />
-    </>
+
+      <div className="lg:flex lg:gap-7 lg:self-center lg:ml-6">
+        <TechnologyNav
+          technologyLinks={technologyLinks}
+          activeLink={params.technology}
+        />
+        <TechnologyArticle
+          name={technologyFromUrl!.name}
+          tag={"The terminology"}
+          description={technologyFromUrl!.description}
+        />
+      </div>
+    </section>
   );
 };
 

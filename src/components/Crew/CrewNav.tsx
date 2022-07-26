@@ -13,14 +13,14 @@ type TCrewNavProps = {
 
 const CrewNav = ({ crewNavLinks, activeLink }: TCrewNavProps) => {
   return (
-    <ul className="flex gap-7 justify-center mx-auto w-full md:mt-8">
+    <ul className="flex gap-7 justify-center mx-auto w-full md:mt-8 lg:justify-start lg:mb-5 lg:mt-20">
       {crewNavLinks.map((crewNavLink) => (
         <li key={nanoid()}>
           <Link
             to={`/crew/${slugify(crewNavLink)}`}
             className={`text-primary/20 hover:text-primary/50 ${
               isActive(activeLink, crewNavLink)
-                ? "  text-primary text-[12px]"
+                ? " text-primary text-[12px]"
                 : ""
             }`}
           >

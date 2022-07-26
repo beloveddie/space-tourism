@@ -15,7 +15,7 @@ const TechnologyNav = ({
   activeLink,
 }: TTechnologyNavProps) => {
   return (
-    <ul className="mt-6 flex gap-3 justify-center w-full md:mt-14">
+    <ul className="mt-6 flex gap-3 justify-center w-full md:mt-14 lg:flex-col lg:mt-0 lg:h-[23rem]">
       {technologyLinks.map((technologyLink, index) => (
         <li key={nanoid()}>
           <Link
