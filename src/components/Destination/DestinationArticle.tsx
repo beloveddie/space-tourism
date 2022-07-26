@@ -14,9 +14,9 @@ const DestinationArticle = ({
   travel,
 }: TDestinationArticleProps) => {
   return (
+
     <article className="mt-4 pb-8 md:mt-8">
       <h2 className="text-[56px] md:text-[80px]">{title.toUpperCase()}</h2>
-
       <p className="text-secondary text-base w-11/12 mx-auto pb-10 border-b-2 border-selection leading-7 md:w-[573px] lg:mx-0 lg:w-[400px]">
         {description}
       </p>
