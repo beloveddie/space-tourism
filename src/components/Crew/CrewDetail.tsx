@@ -26,15 +26,17 @@ const CrewDetail = () => {
 
   return (
     <>
-      <div className="w-[90%] h-62 mx-auto  mb-8 border-b-[0.14rem] border-selection">
-        <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
+      <div className="flex flex-col md:flex-col-reverse">
+        <div className="w-[90%] h-62 mx-auto mb-8 border-b-[0.14rem] border-selection md:mb-[-10rem] md:border-none">
+          <CrewImage images={crewFromUrl!.images} text={crewFromUrl!.name} />
+        </div>
+        <CrewNav crewNavLinks={crewNavLinks} activeLink={params.crew} />
+        <CrewArticle
+          name={crewFromUrl!.name}
+          role={crewFromUrl!.role}
+          bio={crewFromUrl!.bio}
+        />
       </div>
-      <CrewNav crewNavLinks={crewNavLinks} activeLink={params.crew} />
-      <CrewArticle
-        name={crewFromUrl!.name}
-        role={crewFromUrl!.role}
-        bio={crewFromUrl!.bio}
-      />
     </>
   );
 };

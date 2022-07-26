@@ -14,3 +14,11 @@ export type TPageLinks = string[];
 export type TSetShowMobileMenuBar = React.Dispatch<
   React.SetStateAction<boolean>
 >;
+
+export type TItem = { title: string; url: string };
+
+export type TItems = TItem[];
+
+export type NavProps = {
+  routes: TItem[];
+};

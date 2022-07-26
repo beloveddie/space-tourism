@@ -1,22 +1,13 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom";
-import { TItem } from "./MobileNavListItem";
 import MobileNavList from "./MobileNavList";
+import { NavProps } from "../../shared/types";
 
-export type MobileNavProps = {
-  logo: string;
-  routes: TItem[];
-};
-
-const MobileNav = ({ logo, routes }: MobileNavProps) => {
+const MobileNav = ({ routes }: NavProps) => {
   const [showMenuBar, setShowMenuBar] = useState<boolean>(false);
   return (
-    <nav className="flex w-100 justify-between items-center">
-      <Link to="/">
-        <img src={logo} alt="space tourism logo" />
-      </Link>
+    <nav className="md:hidden flex">
       {!showMenuBar ? (
         <AiOutlineMenu
           className="text-4xl text-secondary font-bold cursor-pointer z-20"

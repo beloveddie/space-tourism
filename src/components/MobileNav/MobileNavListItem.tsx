@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { TSetShowMobileMenuBar } from "../../shared/types";
+import { TItem, TSetShowMobileMenuBar } from "../../shared/types";
 import H5 from "../ui/H5";
 import SideNumbers from "../ui/SideNumbers";
-
-export type TItem = { title: string; url: string };
 
 type TItemProps = {
   item: TItem;
