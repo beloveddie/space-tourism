@@ -10,9 +10,9 @@ const TechnologyImage = ({ images, text }: TTechnologyProps) => {
   return (
     <picture>
       <img
-        src={images.landscape}
+        src={images.portrait}
         alt={text}
-        className="mt-6 w-full h-100 md:mt-16"
+        className="mt-6 w-full h-100 md:mt-16 lg:mt-0"
       />
     </picture>
   );
