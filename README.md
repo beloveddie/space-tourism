@@ -1,46 +1,137 @@
-# Getting Started with Create React App
+# Frontend Mentor - Space tourism website solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [GitHub Repository for Space Tourism Website Solution](https://github.com/Eddiebee/space-tourism)
+- Live Site URL: [Live Site URL for Space Tourism Website Solution](https://space-tourism-bice.vercel.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React JS
+- TypeScript
+- Tailwind CSS
+- React-router v6
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [React Router v6](https://reactrouter.com/) - For programmatic and dynamic routing
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Programmatic routing using react-router
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```jsx
+<Routes>
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Home />} />
+    <Route path="destination" element={<DestinationLayout />}>
+      <Route index element={<Destination />} />
+      <Route path=":destination" element={<DestinationDetail />} />
+    </Route>
+    <Route path="crew" element={<CrewLayout />}>
+      <Route index element={<Crew />} />
+      <Route path=":crew" element={<CrewDetail />} />
+    </Route>
+    <Route path="technology" element={<TechnologyLayout />}>
+      <Route index element={<Technology />} />
+      <Route path=":technology" element={<TechnologyDetail />} />
+    </Route>
+  </Route>
+</Routes>
+```
 
-## Learn More
+- Dynamic routing using react-router v6
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```jsx
+import { Navigate } from "react-router-dom";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const Destination = () => {
+  return <Navigate to="/destination/moon" replace={true} />;
+};
+
+export default Destination;
+```
+
+- Tailwind CSS Configuration
+
+```js
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        dark: "#0B0D17",
+        primary: "#ffffff",
+        secondary: "#D0D6F9",
+        selection: "#383B4B",
+      },
+      fontFamily: {
+        bellefair: ["Bellefair", "serif"],
+        barlow: ["Barlow", "sans-serif"],
+        "barlow-condensed": ["Barlow Condensed", "sans-serif"],
+      },
+      animation: {
+        "spin-slow": "spin 80s linear infinite",
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+### Continued development
+
+- I'll be focusing on applying Context API provided by React for more advanced data sharing across apps.
+- I'll be building out more projects with Next JS (a React framework that makes building fullstack React Apps a breeze).
+- Also, using TypeScript helped me write code with less bugs and more predicatable across data being used in the App, so I'll be usinh it in all projects from now.
+
+### Useful resources
+
+- [TypeScript docs](https://www.typescriptlang.org/docs/) - This helped me catch up with the errors I was having using Static typing and error detection, though it can be really time-consuming but I know it's worth the reduced bugs in the codebase and also helps in writing self-documented code (easier) to understand across teams and no need for PropTypes in React lol...
+- [React Router docs](https://reactrouter.com/docs/en/v6) - This docs are well explained and helped me implement v6 of react router even when I had no prior experience building with it. Thanks to the great team behind the scenes.
+
+## Author
+
+- Website - [Eddie (eddiebee) Bassey Otudor](https://github.com/Eddiebee)
+- Frontend Mentor - [@Eddiebee](https://www.frontendmentor.io/profile/Eddiebee)
+- Twitter - [@eddie_otudor](https://www.twitter.com/eddie_otudor)
+- Instagram - [@realeddiebee](https://www.instagram.com/realeddiebee/)
+- LinkedIn - [@eddieotudor](https://www.linkedin.com/in/eddieotudor/)
+
+## Acknowledgments
+
+I thank GOD for the strength, creativity and the passion to build simple solutions. I know this is just the beginning. Thank you Frontend Mentor, much love to the amazing team over there, GOD bless y'all!
