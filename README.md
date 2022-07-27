@@ -117,12 +117,12 @@ module.exports = {
 
 - I'll be focusing on applying Context API provided by React for more advanced data sharing across apps.
 - I'll be building out more projects with Next JS (a React framework that makes building fullstack React Apps a breeze).
-- Also, using TypeScript helped me write code with less bugs and more predicatable across data being used in the App, so I'll be usinh it in all projects from now.
+- Also, using TypeScript helped me write code with less bugs and more predictability across data being used in the App, so I'll be using it in all projects from now.
 
 ### Useful resources
 
-- [TypeScript docs](https://www.typescriptlang.org/docs/) - This helped me catch up with the errors I was having using Static typing and error detection, though it can be really time-consuming but I know it's worth the reduced bugs in the codebase and also helps in writing self-documented code (easier) to understand across teams and no need for PropTypes in React lol...
-- [React Router docs](https://reactrouter.com/docs/en/v6) - This docs are well explained and helped me implement v6 of react router even when I had no prior experience building with it. Thanks to the great team behind the scenes.
+- [TypeScript docs](https://www.typescriptlang.org/docs/) - This helped me catch up with the errors I was having using Static typing and error detection, though it can be really time-consuming but I know it's worth the reduced bugs in the codebase and also helps in writing self-documented code that's easier to understand across teams and no need for PropTypes in React lol...
+- [React Router docs](https://reactrouter.com/docs/en/v6) - The docs is well explained and helped me implement v6 of react router even when I had no prior experience building with it. Thanks to the great team behind the scenes.
 
 ## Author
 
